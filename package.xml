@@ -2,7 +2,15 @@
   <name>particle_filter_project</name>
   <version>0.0.0</version>
   <description>
-  The particle_filter_project package
+  
+  
+  All the generated map (distance image, likelihood image, SLAM image) are directly in src folder
+  # How to run:
+  Create a ~/catkin_ws/src and put all the files into this folder. Modify the image path in likelihood_field_model.py to your path to image
+  Specifically, this line: input_image = cv2.imread('map.png', cv2.IMREAD_GRAYSCALE)
+  You may need to do chmod+x to give executable permision to python files
+  You can see the output of the  sampled motion model in terminal and visualization of senser model by plot package
+
   </description>
   <maintainer email="shifanzhu@umass.edu">Sarah Sebo</maintainer>
   <license>MIT</license>
