@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="particle_filter_project" name="motion" type="motion.py" output="screen"/>
+  <node pkg="particle_filter_project" name="senser" type="likelihood_field_model.py" output="screen"/>
+</launch>

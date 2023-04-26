@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+import rospy
+
 import random
 import math
 
@@ -52,10 +55,16 @@ def UpdateMotion(pose0, pose1, pose):
     return pose
 
 
-pose0 = [10, 20, 0.5]
-pose1 = [10, 21, 0.5]
-pose = [10, 20, 0.5]
+if __name__=="__main__":
+    # initialize this particle filter node
+    rospy.init_node('motion')
 
-print('old pose: ', pose)
-print('new pose: ', UpdateMotion(pose0, pose1, pose))
+    pose0 = [10, 20, 0.5]
+    pose1 = [10, 21, 0.5]
+    pose = [10, 20, 0.5]
+
+    print('old pose: ', pose)
+    print('new pose: ', UpdateMotion(pose0, pose1, pose))
+
+    rospy.spin()
 
